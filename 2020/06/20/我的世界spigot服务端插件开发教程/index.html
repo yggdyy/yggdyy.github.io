@@ -7,15 +7,15 @@
   
   <title>我的世界Bukkit服务端插件开发教程 | yggdyy_的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上古时代，世界一片荒芜，没什么好van的东西。直到有一天，一个叫Bukkit的东西出现了  关于我的世界的服务器​    很久以前（其实不久，就差不多10年前），mc只有官方的服务器，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨佬（非常巨的那种）他们开发出了Bukkit服务端，这个服务端实现了插件功能（这是mc的巨大飞跃！！）。这让我们现在">
+  <meta name="description" content="​    西边的太阳落了下去，留下一片橘红的余晖。东方的天际逐渐迎来了一片银色的光芒，满月渐渐升起，银色逐渐盖过了橘红。一座山头上，一个玩家望着黑暗，停下了脚步。 ​    玩家的不远处，生成了一只爬行者。  关于MC的服务器​    很久以前（其实不久，就差不多10年前），mc只有官方的服务器，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的世界Bukkit服务端插件开发教程">
 <meta property="og:url" content="http://yoursite.com/2020/06/20/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cspigot%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="yggdyy_的blog">
-<meta property="og:description" content="上古时代，世界一片荒芜，没什么好van的东西。直到有一天，一个叫Bukkit的东西出现了  关于我的世界的服务器​    很久以前（其实不久，就差不多10年前），mc只有官方的服务器，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨佬（非常巨的那种）他们开发出了Bukkit服务端，这个服务端实现了插件功能（这是mc的巨大飞跃！！）。这让我们现在">
+<meta property="og:description" content="​    西边的太阳落了下去，留下一片橘红的余晖。东方的天际逐渐迎来了一片银色的光芒，满月渐渐升起，银色逐渐盖过了橘红。一座山头上，一个玩家望着黑暗，停下了脚步。 ​    玩家的不远处，生成了一只爬行者。  关于MC的服务器​    很久以前（其实不久，就差不多10年前），mc只有官方的服务器，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-20T01:57:50.000Z">
-<meta property="article:modified_time" content="2020-06-20T09:39:40.811Z">
+<meta property="article:modified_time" content="2020-06-20T10:17:54.456Z">
 <meta property="article:author" content="yggdy_">
 <meta name="twitter:card" content="summary">
   
@@ -89,17 +89,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>上古时代，世界一片荒芜，没什么好van的东西。直到有一天，一个叫Bukkit的东西出现了</p>
+<p>​    西边的太阳落了下去，留下一片橘红的余晖。东方的天际逐渐迎来了一片银色的光芒，满月渐渐升起，银色逐渐盖过了橘红。一座山头上，一个玩家望着黑暗，停下了脚步。</p>
+<p>​    玩家的不远处，生成了一只爬行者。</p>
 </blockquote>
-<h3 id="关于我的世界的服务器"><a href="#关于我的世界的服务器" class="headerlink" title="关于我的世界的服务器"></a>关于我的世界的服务器</h3><p>​    很久以前（其实不久，就差不多10年前），mc只有<a href="https://www.minecraft.net/zh-hans/download/server" target="_blank" rel="noopener">官方的服务器</a>，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨佬（非常巨的那种）他们开发出了<a href="https://getbukkit.org/download/craftbukkit" target="_blank" rel="noopener">Bukkit服务端</a>，这个服务端实现了插件功能（这是mc的巨大飞跃！！）。这让我们现在可以van到多姿多彩的服务器（真好）。之后，有人对这个服务端进行了改良，就有了<a href="https://www.spigotmc.org/" target="_blank" rel="noopener">Spigot服务端</a>。Spigot和Bukkit其实十分相似，他们的一般是可以兼容插件的。这篇教程将讲述Bukkit的开发。</p>
-<h3 id="基础准备"><a href="#基础准备" class="headerlink" title="基础准备"></a>基础准备</h3><blockquote>
-<p>开发</p>
-</blockquote>
+<h3 id="关于MC的服务器"><a href="#关于MC的服务器" class="headerlink" title="关于MC的服务器"></a>关于MC的服务器</h3><p>​    很久以前（其实不久，就差不多10年前），mc只有<a href="https://www.minecraft.net/zh-hans/download/server" target="_blank" rel="noopener">官方的服务器</a>，那个时代，服务器不能装插件，所以….玩服务器就和你玩局域网联机差不多（想想就恐怖）。不过好在有一群巨佬（非常巨的那种）他们开发出了<a href="https://getbukkit.org/download/craftbukkit" target="_blank" rel="noopener">Bukkit服务端</a>，这个服务端实现了插件功能（这是mc的巨大飞跃！！）。这让我们现在可以van到多姿多彩的服务器（真好）。之后，有人对这个服务端进行了改良，就有了<a href="https://www.spigotmc.org/" target="_blank" rel="noopener">Spigot服务端</a>。Spigot和Bukkit其实十分相似，他们的一般是可以兼容插件的。这篇教程将讲述Bukkit的开发。</p>
+<h3 id="基础准备"><a href="#基础准备" class="headerlink" title="基础准备"></a>基础准备</h3><p>我们来 开 发</p>
 <h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p>​    众所周知，mc是用java写的，自然，服务端的插件也要用java写:(，所以你要熟悉java的基本语法。如果你不会java（that sounds bad）你可以去<a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟</a>学习。当然，你也可以买本书。(人类进步的阶梯)</p>
 <p>​    当然了，你如果有机会看到这篇文章，你应该是有java基础滴（瞎猜）。</p>
 <p>​    除了java基础，你还需要拥有编程的思维（ohhhhhhhh）</p>
 <p>​    别怕，没让你学算法。。。。。。</p>
 <p>​    你只需要基本的逻辑思维和小学数学水平。</p>
+<h4 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h4><p>​    首先，你需要装一个java（废话）。你可以前往<a href="java.com">java官方网站</a>下载。</p>
+<p>​    然后，你需要一个java的IDE，本教程推荐IDEA</p>
 
       
     </div>

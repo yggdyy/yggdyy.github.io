@@ -5,19 +5,22 @@
   
 
   
-  <title>我的第一个帖子 | yggdyy_的blog</title>
+  <title>MCBukkit服务端常用功能实现--邀请功能 | yggdyy_的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我yggdyy是个蒟蒻 蒟蒻蒟蒻蒟蒻蒟蒻">
+  <meta name="description" content="这是一个算法贴 我们需要思考  几乎所有装了插件的生存服，都有一个指令，叫&#x2F;tpa。这个指令是这么用滴，玩家A输入&#x2F;tpa B；然后玩家B输入&#x2F;tpaccept，这时，玩家A会传送到玩家B那里。 将这个过程抽象一下，玩家A发出了请求，玩家B回复了请求。 我把能抽象到这样的插件功能称为邀请功能（准确来说是请求与回复请求功能）  这不很简单吗，值得将？？？？？  看上去真的很简单呢！不过，让我们来梳理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一个帖子">
-<meta property="og:url" content="http://yoursite.com/2020/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90/index.html">
+<meta property="og:title" content="MCBukkit服务端常用功能实现--邀请功能">
+<meta property="og:url" content="http://yoursite.com/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="yggdyy_的blog">
-<meta property="og:description" content="我yggdyy是个蒟蒻 蒟蒻蒟蒻蒟蒻蒟蒻">
+<meta property="og:description" content="这是一个算法贴 我们需要思考  几乎所有装了插件的生存服，都有一个指令，叫&#x2F;tpa。这个指令是这么用滴，玩家A输入&#x2F;tpa B；然后玩家B输入&#x2F;tpaccept，这时，玩家A会传送到玩家B那里。 将这个过程抽象一下，玩家A发出了请求，玩家B回复了请求。 我把能抽象到这样的插件功能称为邀请功能（准确来说是请求与回复请求功能）  这不很简单吗，值得将？？？？？  看上去真的很简单呢！不过，让我们来梳理">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-20T00:51:13.000Z">
-<meta property="article:modified_time" content="2020-06-20T01:45:36.556Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/21/N1bvjg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/21/N1q7MF.png">
+<meta property="article:published_time" content="2020-06-21T02:10:27.000Z">
+<meta property="article:modified_time" content="2020-06-21T03:33:03.443Z">
 <meta property="article:author" content="yggdy_">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/21/N1bvjg.png">
   
     <link rel="alternate" href="/atom.xml" title="yggdyy_的blog" type="application/atom+xml">
   
@@ -66,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-我的第一个帖子" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-MCBukkit服务端常用功能实现-邀请功能" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90/" class="article-date">
-  <time datetime="2020-06-20T00:51:13.000Z" itemprop="datePublished">2020-06-20</time>
+    <a href="/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/" class="article-date">
+  <time datetime="2020-06-21T02:10:27.000Z" itemprop="datePublished">2020-06-21</time>
 </a>
     
   </div>
@@ -80,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一个帖子
+      MCBukkit服务端常用功能实现--邀请功能
     </h1>
   
 
@@ -88,12 +91,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我yggdyy是个蒟蒻</p>
-<h1 id="蒟蒻"><a href="#蒟蒻" class="headerlink" title="蒟蒻"></a>蒟蒻</h1><h2 id="蒟蒻-1"><a href="#蒟蒻-1" class="headerlink" title="蒟蒻"></a>蒟蒻</h2><h3 id="蒟蒻-2"><a href="#蒟蒻-2" class="headerlink" title="蒟蒻"></a>蒟蒻</h3><h4 id="蒟蒻-3"><a href="#蒟蒻-3" class="headerlink" title="蒟蒻"></a>蒟蒻</h4>
+        <h3 id="这是一个算法贴"><a href="#这是一个算法贴" class="headerlink" title="这是一个算法贴"></a>这是一个算法贴</h3><blockquote>
+<p>我们需要思考</p>
+</blockquote>
+<p>几乎所有装了插件的生存服，都有一个指令，叫/tpa。这个指令是这么用滴，玩家A输入/tpa B；然后玩家B输入/tpaccept，这时，玩家A会传送到玩家B那里。</p>
+<p>将这个过程抽象一下，玩家A发出了请求，玩家B回复了请求。</p>
+<p>我把能抽象到这样的插件功能称为邀请功能（准确来说是请求与回复请求功能）</p>
+<blockquote>
+<p>这不很简单吗，值得将？？？？？</p>
+</blockquote>
+<p>看上去真的很简单呢！不过，让我们来梳理一下</p>
+<p>首先，我们有两个玩家</p>
+<p><img src="https://s1.ax1x.com/2020/06/21/N1bvjg.png" alt="两个玩家"></p>
+<p>现在，A向B发送了请求，我们用一条黄色的边表示一个未被受理的请求</p>
+<p><img src="https://s1.ax1x.com/2020/06/21/N1q7MF.png" alt="两个玩家A向B发送请求"></p>
+<p>接着，B可以选择同意或拒绝这个请求</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90/" data-id="ckbmxt2w50000n0uzep3n0kbx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/" data-id="ckboip1560000z0uzbby08mfm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -102,19 +119,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/06/20/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cspigot%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          我的世界Bukkit服务端插件开发教程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/06/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/06/20/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cspigot%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">我的世界Bukkit服务端插件开发教程</div>
     </a>
   
 </nav>

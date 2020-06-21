@@ -64,6 +64,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MCBukkit服务端常用功能实现-邀请功能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/" class="article-date">
+  <time datetime="2020-06-21T02:10:27.000Z" itemprop="datePublished">2020-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/">MCBukkit服务端常用功能实现--邀请功能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="这是一个算法贴"><a href="#这是一个算法贴" class="headerlink" title="这是一个算法贴"></a>这是一个算法贴</h3><blockquote>
+<p>我们需要思考</p>
+</blockquote>
+<p>几乎所有装了插件的生存服，都有一个指令，叫/tpa。这个指令是这么用滴，玩家A输入/tpa B；然后玩家B输入/tpaccept，这时，玩家A会传送到玩家B那里。</p>
+<p>将这个过程抽象一下，玩家A发出了请求，玩家B回复了请求。</p>
+<p>我把能抽象到这样的插件功能称为邀请功能（准确来说是请求与回复请求功能）</p>
+<blockquote>
+<p>这不很简单吗，值得将？？？？？</p>
+</blockquote>
+<p>看上去真的很简单呢！不过，让我们来梳理一下</p>
+<p>首先，我们有两个玩家</p>
+<p><img src="https://s1.ax1x.com/2020/06/21/N1bvjg.png" alt="两个玩家"></p>
+<p>现在，A向B发送了请求，我们用一条黄色的边表示一个未被受理的请求</p>
+<p><img src="https://s1.ax1x.com/2020/06/21/N1q7MF.png" alt="两个玩家A向B发送请求"></p>
+<p>接着，B可以选择同意或拒绝这个请求</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/" data-id="ckboip1560000z0uzbby08mfm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-我的世界spigot服务端插件开发教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/20/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cspigot%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/" class="article-date">
@@ -97,8 +148,8 @@
 <p>​    除了java基础，你还需要拥有编程的思维（ohhhhhhhh）</p>
 <p>​    别怕，没让你学算法。。。。。。</p>
 <p>​    你只需要基本的逻辑思维和小学数学水平。</p>
-<h4 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h4><p>​    首先，你需要装一个java（废话）。你可以前往<a href="java.com">java官方网站</a>下载。</p>
-<p>​    然后，你需要一个java的IDE，本教程推荐IDEA</p>
+<h4 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h4><p>​    首先，你需要装一个java（废话）。你可以前往<a href="https://www.java.com/zh_CN/" target="_blank" rel="noopener">java官方网站</a>下载。</p>
+<p>​    然后，你需要一个java的IDE，本教程推荐IDEA，点这里<a href="https://www.jetbrains.com/zh-cn/idea/promo/?utm_source=baidu&utm_medium=cpc&utm_campaign=cn-bai-br-intellij-ex-pc&utm_content=intellij-core&utm_term=idea" target="_blank" rel="noopener">下载</a>。IDEA分社区版和正式版，社区版免费，正式版要钱。对于mc服务端插件的开发，社区版足够了。</p>
 
       
     </div>
@@ -228,6 +279,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/06/21/MCBukkit%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0-%E9%82%80%E8%AF%B7%E5%8A%9F%E8%83%BD/">MCBukkit服务端常用功能实现--邀请功能</a>
+          </li>
         
           <li>
             <a href="/2020/06/20/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8Cspigot%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/">我的世界Bukkit服务端插件开发教程</a>
